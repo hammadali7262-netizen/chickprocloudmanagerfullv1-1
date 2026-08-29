@@ -1,26 +1,18 @@
-CHICKPRO MANAGER v2 - FREE LOCAL VERSION
-=========================================
+ChickPro Production Fixed v2
 
-Open index.html in Chrome or Edge.
+Based on the user's uploaded ChickPro Manager HTML. Fixes included:
+- Added a dedicated Chicken Waste / Wastage entry screen.
+- Waste records support date, product, category, quantity, unit, remarks, edit and delete.
+- Added complete purchase listing with edit/delete and supplier/product selectors.
+- Sales register shows Date, Item, Qty, Unit, Rate (Rs), Total (Rs), Payment Mode, Customer Name, Phone Number, Remarks, Edit/Delete.
+- Sale edit updates both sale header and sale item.
+- Processing batches and distribution support edit/delete.
+- Admin permissions expanded to all operational modules: wastage, waste sales, daily prices, day close, import/export, staff.
+- Admin permission matrix is explicitly visible and editable.
+- Audit triggers added for wastage, returns, waste sales, daily prices, day close, and permission changes.
+- RLS policies added for wastage, returns, waste sales, daily prices, and day close so authenticated users can use them.
+- Date period selectors remain: Today, Yesterday, This Week, Last Week, This Month, Last Month, Custom.
+- Day Close has edit/delete.
+- Inventory formula continues to use purchase + processing distribution + returns - sales - wastage.
 
-What is new in v2:
-- Every product has an explicit unit: KG, BIRDS, DOZEN, TRAY, PACK, PCS, etc.
-- Live Chicken purchase records BOTH total live weight (KG) and number of birds.
-- Chicken Process module for live-to-dressed processing and yield calculation.
-- Mortality/wastage records reduce live stock.
-- Fresh Cut Chicken cost per KG is recalculated from live cost and actual yield.
-- Built-in Use Guide explains the workflow and quantities.
-- Old v1 localStorage data is automatically imported when v2 data is not yet present.
-
-Recommended ChickPro workflow:
-1. Purchase Live Chicken using total live KG + bird count.
-2. Record any mortality/wastage in Chicken Process.
-3. Record processing: live KG consumed + birds processed + dressed KG produced.
-4. Sell Fresh Cut Chicken by KG.
-5. Sell Eggs by DOZEN (or change the product unit if your stock method is different).
-6. Sell frozen items by PACK (or configure each item's correct unit).
-7. Track deliveries and expenses.
-8. Download a backup regularly from Settings.
-
-Important:
-This is still a local/offline browser system. Data is stored in the browser/device. It has no login, cloud database, or multi-device sync yet.
+Important: this is still a single-file browser app using the Supabase publishable key. Deploy this index.html to the existing Vercel project. Do not expose any Supabase secret/service-role key.
